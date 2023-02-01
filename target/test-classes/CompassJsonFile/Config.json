@@ -1,0 +1,154 @@
+{
+  "id": "safefleetNavigatorSoftwareSettings",
+  "fields": [
+    {
+      "id": "routingServer",
+      "label": "routing server",
+      "tooltip": "This is the backoffice for Navigator to get the routes",
+      "enable": true,
+      "defaultValue": "Compass",
+      "options": [
+        {
+          "key": "compass",
+          "value": "Compass"
+        },
+        {
+          "key": "path",
+          "value": "Path"
+        }
+      ]
+    },
+    {
+      "id": "numberOfLogFiles",
+      "label": "number of log files",
+      "tooltip": "it is used to specify number of days log files to be generated",
+      "min": 15,
+      "max": 30,
+      "enable": true,
+      "defaultValue": 15
+    },
+    {
+      "id": "gpsSamplingRate",
+      "label": "gps sampling rate",
+      "tooltip": "it is used for collecting gps data at this rate",
+      "min": 10,
+      "max": 60,
+      "enable": true,
+      "defaultValue": 20
+    },
+    {
+      "id": "maxGPSIteration",
+      "label": "maximum GPS iteration",
+      "tooltip": "it is used for collecting gps data at this max iteration",
+      "min": 1,
+      "max": 6,
+      "enable": true,
+      "defaultValue": 3
+    },
+    {
+      "id": "measureSystem",
+      "label": "Measure system",
+      "tooltip": "it is used for navigation distance instructions",
+      "enable": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "key": "imperial",
+          "value": "imperial"
+        },
+        {
+          "key": "metric",
+          "value": "metric"
+        }
+      ]
+    },
+    {
+      "id": "dvrHealthCheck",
+      "label": "DVR health check",
+      "tooltip": "This is to check DVR health",
+      "enable": true,
+      "defaultValue": "yes",
+      "options": [
+        {
+          "key": "yes",
+          "value": "Yes"
+        },
+        {
+          "key": "no",
+          "value": "No"
+        }
+      ]
+    },
+    {
+      "id": "enableNotes",
+      "label": "Enable notes from Compass",
+      "tooltip": "This is to view the notes for #Routes, #Students and #Stops",
+      "enable": true,
+      "defaultValue": "yes",
+      "options": [
+        {
+          "key": "yes",
+          "value": "Yes"
+        },
+        {
+          "key": "no",
+          "value": "No"
+        }
+      ]
+    },
+    {
+      "id": "lockScreen",
+      "label": "Lock Screen Speed",
+      "tooltip": "minimun speed before the screen gets locked",
+      "min": 1,
+      "max": 60,
+      "enable": true,
+      "defaultValue": "30"
+    },
+    {
+      "id": "turnOffScreen",
+      "label": "Turn Off Screen On Movement",
+      "tooltip": "minimun speed before the screen gets turned off",
+      "min": 1,
+      "max": 60,
+      "enable": false,
+      "defaultValue": "30"
+    },
+    {
+      "id": "closeStudentScreenSpeed",
+      "label": "Automatic screen close on movement",
+      "tooltip": "The max speed a vehicle can move without closing the student tracking screen",
+      "min": 10,
+      "max": 60,
+      "enable": false,
+      "defaultValue": "20"
+    },
+    {
+      "id": "volumeLevel",
+      "label": "Volume level percentage",
+      "tooltip": "The default volume percentage for voice instructions when navigating a route",
+      "min": 0,
+      "max": 100,
+      "enable": false,
+      "defaultValue": "50"
+    },
+    {
+      "id": "brightnessLevel",
+      "label": "Brightness level percentage",
+      "tooltip": "The default brightness percentage for the MDT display",
+      "min": 50,
+      "max": 100,
+      "enable": false,
+      "defaultValue": "70"
+    },
+    {
+      "id": "minSpeedImperial",
+      "label": "minimum speed in Imperial Unit in mph",
+      "tooltip": "it is used for closing the student and stop screen",
+      "min": "0.0F",
+      "max": "100.0F",
+      "enable": true,
+      "defaultValue": "20F"
+    }
+  ]
+}

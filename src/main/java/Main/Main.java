@@ -13,7 +13,7 @@ public class Main {
 
 		ReadJson obj = new ReadJson();
 	//	obj.ReadJsonFile("brightnessLevel", "defaultValue");	
-		System.out.println(obj.ReadJsonFile("dvrHealthCheck", "defaultValue"));
+		System.out.println(obj.ReadJsonFile("routingServer", "defaultValue","Compass" ));
 	}
 
 }

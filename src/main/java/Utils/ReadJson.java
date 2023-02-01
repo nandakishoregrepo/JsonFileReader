@@ -9,10 +9,18 @@ import org.json.simple.parser.ParseException;
 public class ReadJson  {
 
 	
-	public String ReadJsonFile(String ConfigType, String ConfigValue) throws IOException, ParseException	{
+	public String ReadJsonFile(String ConfigType, String ConfigValue, String BackofficeType) throws IOException, ParseException	{
 		
 	JSONParser jsonparser = new JSONParser();
-	FileReader reader = new FileReader(".\\src\\test\\resources\\JsonFile\\Config.json");
+	FileReader reader;
+	if (BackofficeType.equals("Path"))
+		{
+			 reader = new FileReader(".\\src\\test\\resources\\PathJsonFile\\Config.json");
+		} else
+		{
+			 reader = new FileReader(".\\src\\test\\resources\\CompassJsonFile\\Config.json");
+		}
+
 	Object obj=  jsonparser.parse(reader);
 	JSONObject ConfigObj =  (JSONObject)obj;
 	JSONArray configArraySize = (JSONArray) ConfigObj.get("fields");
@@ -27,11 +35,8 @@ public class ReadJson  {
 					Config_Value = (Object) Config.get(ConfigValue);
 				}
 		}
-	
-//	System.out.println("Config Type:" + ConfigType);
-//	System.out.println("Config Value:"+ Config_Value);
 
-	return (String) Config_Value;
+	return Config_Value.toString();
 }
 	
 }
